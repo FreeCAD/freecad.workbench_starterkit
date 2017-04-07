@@ -1,6 +1,6 @@
 import os
 import FreeCADGui as gui  # use "from freecad import gui" once its available
-from freecad.modules.template_extension import ICONPATH
+from freecad.template_extension import ICONPATH
 
 
 class template_workbench(gui.Workbench):
@@ -16,7 +16,7 @@ class template_workbench(gui.Workbench):
 
     def Initialize(self):
         """here is the place to import all the commands"""
-        from freecad.modules.template_extension import my_numpy_function
+        from freecad.template_extension import my_numpy_function
         print("switching to template_extension")
         print("run a function: ", my_numpy_function.my_foo(100))
 

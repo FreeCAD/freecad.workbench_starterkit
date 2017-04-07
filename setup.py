@@ -1,5 +1,5 @@
 from setuptools import setup
-from freecad.modules.template_extension import __version__
+from freecad.template_extension import __version__
 # name: this is the name pip is using.
 # Packages using the same name here cannot be installed together
 

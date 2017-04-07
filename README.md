@@ -38,6 +38,18 @@ Do not place code into `freecad/__init__.py`. These files are only used to let p
 
 `init.py` and `init_gui.py` get called at startup of FreeCAD. Do not put very time-intensive code in these files to reduce the start-up time.
 
+## rules
+
+__the "freecad" namespace is not allowed to be used directly.__ this means it is not allowed to set any variables in the `__init__.py` of freecad. (But as with python3 this `__init__.py` should not exist anyway, so I think this is not a big problem.)
+Further it's not allowed to add variables to the freecad-namespace directly. This can introduce name-clashes (although the chance it really is a problem is quite small)
+
+not allowed:
+`freecad.myVariable = 10`
+
+allowed:
+`freecad.app.myVariable = 10`
+
+
 ## test your module/ workbench
 If you want to work on your extension you have the following options:
 
