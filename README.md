@@ -7,7 +7,7 @@ As python imports seems not that easy to understand, this template should show t
 Due to the fact we are now using the pktutil-module to find extension of freecad, it's possible to use standart-paths of pyton to place the extension. This is any location which is included in the sys.path. To get a list of all the locations simple run this code in the FreeCAD-console:
 
 ```
-ìmport sys
+import sys
 sys.path
 ```
 
@@ -77,6 +77,12 @@ pip install .
 
 #### uploading your package to pypi
 Please have a look at this [tutorial](https://pypi.python.org/pypi/twine)
+- `python setup.py sdist`
+- login to pypi  https://pypi.python.org/pypi
+- PackageIndex->Package Submission
+- choose the PKG-INFO in <pkg-name>.egg-info
+- press "add package info"
+- `twine upload dist/<package>`
 
 Be carfully with version-numbering. It seems pypi doesn't allow to upload a package with a version smaller then the biggest version of the package uploaded. This seems to be true also for deleted packages and deleted verions.
 
