@@ -1,1 +1,1 @@
-recursive-include freecad/template_extension/resources *
+recursive-include freecad/modules/template_extension/resources *

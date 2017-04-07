@@ -19,24 +19,27 @@ sys.path
 ```
 freecad/
 ├── __init__.py
-└── template_extension/
-    ├── __init__.py
-    ├── init_gui.py
-    └── (init.py)
+└── modules
+    └── template_extension/
+        ├── __init__.py
+        ├── init_gui.py
+        └── (init.py)
 ```
 
 #### minimal structure of a freecad-workbench/module for python3 (only)
 ```
 freecad/
-└── template_extension/
-    ├── __init__.py
-    ├── init_gui.py
-    └── (init.py)
+└── modules/
+    └── template_extension/
+        ├── __init__.py
+        ├── init_gui.py
+        └── (init.py)
 ```
 
 Do not place code into `freecad/__init__.py`. These files are only used to let pkgutil find your extension with python2.
 
 `init.py` and `init_gui.py` get called at startup of FreeCAD. Do not put very time-intensive code in these files to reduce the start-up time.
+
 
 ## test your module/ workbench
 If you want to work on your extension you have the following options:
