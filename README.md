@@ -1,5 +1,10 @@
 # template extension
 template for a FreeCAD workbench / module
+to try this template use:
+```
+pip install template-extension
+# pip uninstall template-extension # to remove
+```
 
 ## basics
 As python imports seems not that easy to understand, this template should show the way how extensions work in future versions of FreeCAD.
@@ -40,7 +45,7 @@ Do not place code into `freecad/__init__.py`. These files are only used to let p
 
 ## rules
 
-__the "freecad" namespace is not allowed to be used directly.__ this means it is not allowed to set any variables in the `__init__.py` of freecad. (But as with python3 this `__init__.py` should not exist anyway, so I think this is not a big problem.)
+__the "freecad" namespace is not allowed to be used directly.__ this means it is not allowed to set any variables in the `__init__.py` of freecad. (But as with python3 this `__init__.py` should not exist anyway, this isn't a problem.)
 Further it's not allowed to add variables to the freecad-namespace directly. This can introduce name-clashes (although the chance it really is a problem is quite small)
 
 not allowed:
