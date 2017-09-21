@@ -15,7 +15,10 @@ class template_workbench(gui.Workbench):
         return "Gui::PythonWorkbench"
 
     def Initialize(self):
-        """here is the place to import all the commands"""
+        """
+        This function is called at the first activation of the workbench.
+        here is the place to import all the commands
+        """
         from freecad.template_extension import my_numpy_function
         print("switching to template_extension")
         print("run a function: ", my_numpy_function.my_foo(100))
