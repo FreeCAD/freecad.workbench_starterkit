@@ -1,13 +1,15 @@
 import os
-import FreeCADGui as gui  # use "from freecad import gui" once its available
+import FreeCADGui as gui
 from freecad.template_extension import ICONPATH
 
 
 class template_workbench(gui.Workbench):
-    """frame workbench"""
+    """
+    class which gets initiated at starup of the gui
+    """
 
     MenuText = "template workbench"
-    ToolTip = "template workbench"                                      # TODO
+    ToolTip = "a simple template workbench"
     Icon = os.path.join(ICONPATH, "template_resource.svg")
     toolbox = []
 
@@ -27,9 +29,15 @@ class template_workbench(gui.Workbench):
         self.appendMenu("Tools", self.toolbox)
 
     def Activated(self):
+        '''
+        code which should be computed when a user switch to this workbench
+        '''
         pass
 
     def Deactivated(self):
+        '''
+        code which should be computed when this workbench is deactivated
+        '''
         pass
 
 
