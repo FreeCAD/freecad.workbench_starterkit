@@ -1,38 +1,14 @@
-# template extension
+# FreeCAD Workbench-Starterkit
 
-template for a FreeCAD workbench / module to try this template use:
+This is a template for a FreeCAD workbench / module.
 
+To try this template, install the package with pip:
 ```
-pip install template-extension
+pip install https://github.com/FreeCAD/Workbench-Starterkit/archive/master.tar.gz
 # pip uninstall template-extension # to remove
 ```
 
-## basics
-
-As python imports seems not that easy to understand, this template should show the way how extensions work in future versions of FreeCAD.
-
-### Some freecad-related definitions:
-
-- **module** : a Python source file, which can expose classes, functions and global variables
-- **package** : a directory containing Python modules.
-- **workbench** : a _graphical space_ inside the FreeCAD-Gui which adds functionality related to a specific task
-- **namespace-package** : a package which add functionality to a specific namespace. For FreeCAD we are talking about packages which are importable with `from freecad import my_package`. (Sometimes it's also called new-style-module)
-- **extension-module**: a library (.so / .dll) written in C/C++ which adds the possibility to import this library with python.
-
-### Some definitions which are used in discussions, but will lead to confusion
-
-- **freecad-module**: Its anything available through FreeCADs python interpretor and placed in FreeCADs directory structure. This can be a **module, package, workbench, namespace-package, extension-module**.
-- **new_style_module**: This refers to **packages** which are added to FreeCAD as **namespace-packages**
-- **old_style_module**: A **package** which is plugged into FreeCAD by adding it's base-directory to `sys.path` and uses `Init.py` and `InitGui.py` to get initialized by FreeCAD.
-
-Due to the fact we are now using the pktutil-module to find extension of freecad, it's possible to use standard-python-paths to place the extension. This is any location which is included in the sys.path. To get a list of all the locations simple run this code in the FreeCAD-console:
-
-```
-import sys
-sys.path
-```
-
-## structure of a namespace-package
+## Structure of a workbench:
 
 ### files:
 
@@ -110,6 +86,31 @@ Once uploaded the package can be installed with:
 
 ```
 pip install <package-name>
+```
+
+## additional stuff
+
+As python imports seems not that easy to understand, this template should show the way how extensions work in future versions of FreeCAD.
+
+### Some freecad-related definitions:
+
+- **module** : a Python source file, which can expose classes, functions and global variables
+- **package** : a directory containing Python modules.
+- **workbench** : a _graphical space_ inside the FreeCAD-Gui which adds functionality related to a specific task
+- **namespace-package** : a package which add functionality to a specific namespace. For FreeCAD we are talking about packages which are importable with `from freecad import my_package`. (Sometimes it's also called new-style-module)
+- **extension-module**: a library (.so / .dll) written in C/C++ which adds the possibility to import this library with python.
+
+### Some definitions which are used in discussions, but will lead to confusion
+
+- **freecad-module**: Its anything available through FreeCADs python interpretor and placed in FreeCADs directory structure. This can be a **module, package, workbench, namespace-package, extension-module**.
+- **new_style_module**: This refers to **packages** which are added to FreeCAD as **namespace-packages**
+- **old_style_module**: A **package** which is plugged into FreeCAD by adding it's base-directory to `sys.path` and uses `Init.py` and `InitGui.py` to get initialized by FreeCAD.
+
+Due to the fact we are now using the pktutil-module to find extension of freecad, it's possible to use standard-python-paths to place the extension. This is any location which is included in the sys.path. To get a list of all the locations simple run this code in the FreeCAD-console:
+
+```
+import sys
+sys.path
 ```
 
 --------------------------------------------------------------------------------
