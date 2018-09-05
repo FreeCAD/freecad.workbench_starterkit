@@ -1,9 +1,10 @@
 import os
-import FreeCADGui as gui
-from freecad.template_extension import ICONPATH
+import FreeCADGui as Gui
+import FreeCAD as App
+from freecad.workbench_starterkit import ICONPATH
 
 
-class template_workbench(gui.Workbench):
+class template_workbench(Gui.Workbench):
     """
     class which gets initiated at starup of the gui
     """
@@ -21,9 +22,9 @@ class template_workbench(gui.Workbench):
         This function is called at the first activation of the workbench.
         here is the place to import all the commands
         """
-        from freecad.template_extension import my_numpy_function
-        print("switching to template_extension")
-        print("run a function: ", my_numpy_function.my_foo(100))
+        from freecad.workbench_starterkit import my_numpy_function
+        App.Console.PrintMessage("switching to workbench_starterkit")
+        App.Console.PrintMessage("run a numpy function: sqrt(100) = {}".format(my_numpy_function.my_foo(100)))
 
         self.appendToolbar("Tools", self.toolbox)
         self.appendMenu("Tools", self.toolbox)
@@ -41,4 +42,4 @@ class template_workbench(gui.Workbench):
         pass
 
 
-gui.addWorkbench(template_workbench())
+Gui.addWorkbench(template_workbench())

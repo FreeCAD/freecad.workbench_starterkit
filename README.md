@@ -1,10 +1,10 @@
 # FreeCAD Workbench-Starterkit
 
-This is a template for a FreeCAD workbench / module.
+This is a template for a FreeCAD workbench / module. As python-packaging and packaging for FreeCAD is not an easy task, this repository should give a overview of the things learned so far. If all you want is to create an extension for FreeCAD (module, additional gui-stuff, workbench), simple copy this repo and start replacing things.
 
-To try this template, install the package with pip:
-```
-pip install https://github.com/FreeCAD/Workbench-Starterkit/archive/master.tar.gz
+To try the latest release of this template:
+```bash
+pip install freecad.workbench_starterkit
 # pip uninstall template-extension # to remove
 ```
 
@@ -20,7 +20,7 @@ pip install https://github.com/FreeCAD/Workbench-Starterkit/archive/master.tar.g
 
 ```
 freecad/
-└── template_extension/
+└── workbench_starterkit/
     ├── __init__.py
     ├── init_gui.py
     └── (init.py)
@@ -28,17 +28,36 @@ freecad/
 
 `init.py` and `init_gui.py` are called at startup of FreeCAD. Do not put very time-intensive code in these files to reduce the start-up time.
 
+
+## Naming of freecad modules
+
+Several names are needed:
+- repository-name   
+eg.: `Workbench-Starterkit`
+
+- the distribution-name
+This name is set in the [setup.py](setup.py) ->
+eg.: `name='freecad.workbench_starterkit'`
+
+- the package-name
+The name of the package which can be imported from python. Note that it's possible that there are several packages in one repository with only one setup.py. You simple specify all packages and modules in the `packages` section of the setup.py.
+This name must not contain any python operator symbols like "-".
+If the repository contains only one pthon-package it makes sense to choose the same names for the python-package and the pypi-package.
+eg.: `freecad.workbench_starterkit`
+
+
 ## rules
 
 **The "freecad" namespace is not allowed to be used directly.** This means it is not allowed to set any variables in the `__init__.py` of freecad. (But as with python3 this `__init__.py` should not exist anyway, this isn't a problem.) Further it's not allowed to add variables to the freecad-namespace directly. This can introduce name-clashes.
 
 not allowed: `freecad.myVariable = 10` allowed: `freecad.app.myVariable = 10`
 
+
 ## test your module/ workbench
 
 If you want to work on your extension you have the following options:
 
-- start FreeCAD from the root-directory you are working in (eg. TemplateExtension)
+- start FreeCAD from the root-directory you are working in (eg. workbench_starterkit)
 - simple link the extension to a location where python can find it.
 - pip install -e . adds the root-directory to easy_install.path.
 
@@ -49,6 +68,18 @@ Currently freecad has several ways to install packages [1], [2]. With pip and py
 ### setup file
 
 The `setup.py` file located in the main directory is a minimal example to get a extension installed. There we are using setuptools. If you need advanced options to install your package, please have a look at the documentation of [setuptools](here: https://setuptools.readthedocs.io/en/latest/).
+
+### versions
+
+It's common practise to include a version-string in the python-package. The version should then be imported to the root-`__init__.py` to use it like this:
+
+```python
+import freecad.workbench_starterkit
+freecad.workbench_starterkit.__version__
+```
+
+In the setup.py we do not have access to the library itself, so the `__vesion__` must be imported without the assumption that the package is installed. This can be done by runnung the file directly with `exec`.   
+TODO: Is there any better way to do this?
 
 ### resources
 
@@ -90,19 +121,18 @@ pip install <package-name>
 
 ## additional stuff
 
-As python imports seems not that easy to understand, this template should show the way how extensions work in future versions of FreeCAD.
-
-### Some freecad-related definitions:
+### Some FreeCAD- and python related definitions:
 
 - **module** : a Python source file, which can expose classes, functions and global variables
 - **package** : a directory containing Python modules.
+- **distribution** : the artifacts which are created by running the setup.py. Can contain multiple packages.
 - **workbench** : a _graphical space_ inside the FreeCAD-Gui which adds functionality related to a specific task
 - **namespace-package** : a package which add functionality to a specific namespace. For FreeCAD we are talking about packages which are importable with `from freecad import my_package`. (Sometimes it's also called new-style-module)
 - **extension-module**: a library (.so / .dll) written in C/C++ which adds the possibility to import this library with python.
 
 ### Some definitions which are used in discussions, but will lead to confusion
 
-- **freecad-module**: Its anything available through FreeCADs python interpretor and placed in FreeCADs directory structure. This can be a **module, package, workbench, namespace-package, extension-module**.
+- **freecad-module**: It's anything available through FreeCADs python interpretor and placed in FreeCADs directory structure. This can be a **module, package, workbench, namespace-package, extension-module**.
 - **new_style_module**: This refers to **packages** which are added to FreeCAD as **namespace-packages**
 - **old_style_module**: A **package** which is plugged into FreeCAD by adding it's base-directory to `sys.path` and uses `Init.py` and `InitGui.py` to get initialized by FreeCAD.
 

@@ -1,15 +1,23 @@
 from setuptools import setup
-from freecad.template_extension import __version__
-# name: this is the name pip is using.
+import os
+# from freecad.workbench_starterkit.version import __version__
+# name: this is the name of the distribution.
 # Packages using the same name here cannot be installed together
 
-setup(name='freecad.starterkit',
+version_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 
+                            "freecad", "workbench_starterkit", "version.py")
+with open(version_path) as fp:
+    exec(fp.read())
+
+print(__version__)
+
+setup(name='freecad.workbench_starterkit',
       version=str(__version__),
       packages=['freecad',
-                'freecad.template_extension'],
+                'freecad.workbench_starterkit'],
       maintainer="looooo",
       maintainer_email="sppedflyer@gmail.com",
       url="https://github.com/FreeCAD/Workbench-Starterkit",
       description="template for a freecad extensions, installable with pip",
-      install_requires=['numpy'], # should be satisfied by FreeCAD already
+      install_requires=['numpy'], # should be satisfied by FreeCAD's system dependencies already
       include_package_data=True)
