@@ -126,6 +126,7 @@ pip install <package-name>
 - [pyrate](https://github.com/mess42/pyrate)
 - [OpenGlider](https://github.com/booya-at/OpenGlider)
 - [FCGear](https://github.com/looooo/FCGear)
+- [freecad_pipintegration](https://github.com/looooo/freecad_pipintegration)
 
 ### Some FreeCAD- and python related definitions:
 
