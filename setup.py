@@ -9,8 +9,6 @@ version_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),
 with open(version_path) as fp:
     exec(fp.read())
 
-print(__version__)
-
 setup(name='freecad.workbench_starterkit',
       version=str(__version__),
       packages=['freecad',

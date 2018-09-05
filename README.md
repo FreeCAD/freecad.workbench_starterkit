@@ -5,7 +5,7 @@ This is a template for a FreeCAD workbench / module. As python-packaging and pac
 To try the latest release of this template:
 ```bash
 pip install freecad.workbench_starterkit
-# pip uninstall template-extension # to remove
+# pip uninstall freecad.workbench_starterkit # to remove
 ```
 
 ## Structure of a workbench:
