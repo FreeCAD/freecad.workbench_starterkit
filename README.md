@@ -121,6 +121,12 @@ pip install <package-name>
 
 ## additional stuff
 
+### Examples using this structure:
+
+- [pyrate](https://github.com/mess42/pyrate)
+- [OpenGlider](https://github.com/booya-at/OpenGlider)
+- [FCGear](https://github.com/looooo/FCGear)
+
 ### Some FreeCAD- and python related definitions:
 
 - **module** : a Python source file, which can expose classes, functions and global variables
