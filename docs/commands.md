@@ -1,5 +1,5 @@
 # Code Snippets
-There is no way to add a button, menue entry from python to a workbench which is added with c++. So here is a comparison how to do that with python and with c++.
+There is no way to add a button, menu entry from python to a workbench which is added with c++. So here is a comparison how to do that with python and with c++.
 
 ## Adding a command:
 This can be done either with python or c++.
