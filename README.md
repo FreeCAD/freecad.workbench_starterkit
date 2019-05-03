@@ -36,11 +36,11 @@ Several names are needed:
 - repository-name   
 eg.: `freecad.workbench_starterkit`
 
-- the distribution-name
+- the distribution-name  
 This name is set in the [setup.py](setup.py) ->
 eg.: `name='freecad.workbench_starterkit'`
 
-- the package-name
+- the package-name  
 The name of the package which can be imported from python. Note that it's possible that there are several packages in one repository with only one setup.py. You simple specify all packages and modules in the `packages` section of the setup.py.
 This name must not contain any python operator symbols like "-".
 If the repository contains only one pthon-package it makes sense to choose the same names for the repository-name, python-package and the pypi-package.
