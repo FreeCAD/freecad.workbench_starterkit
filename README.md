@@ -20,6 +20,7 @@ pip install freecad.workbench_starterkit
 
 ```
 freecad/
+├── __init__.py
 └── workbench_starterkit/
     ├── __init__.py
     ├── init_gui.py
