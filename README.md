@@ -78,7 +78,7 @@ Currently FreeCAD has several ways to install packages:
 1. [Freecad Addon Manager][AddonManager] 
 2. [freecad-pluginloader][pluginloader]  
 
-With `pip` and `pypi` a third option is introduced. In addiction, utilizing `pip` also provides powerful possibilities to install third party dependencies.
+With `pip` and `pypi` a third option is introduced. In addition, utilizing `pip` also provides powerful possibilities to install third party dependencies.
 
 ### setup file
 
