@@ -93,7 +93,7 @@ import freecad.workbench_starterkit
 freecad.workbench_starterkit.__version__
 ```
 
-In the setup.py we do not have access to the library itself, so the `__vesion__` must be imported without the assumption that the package is installed. This can be done by running the file directly with `exec`.  
+In the setup.py we do not have access to the library itself, so the `__version__` must be imported without the assumption that the package is installed. This can be done by running the file directly with `exec`.  
 
 :exclamation:**TODO**: Is there any better way to do this?
 
