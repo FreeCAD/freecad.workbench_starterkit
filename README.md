@@ -15,8 +15,7 @@ pip uninstall freecad.workbench_starterkit
 
 ### Files
 
-- `init.py`: optional, is called at startup. With gui and without gui.
-- `init_gui.py`: mandatory for modules adding new functionality to the GUI
+- `init_gui.py`: mandatory for modules adding new functionality to the GUI (is called at freecad/freecadcmd starup).
 - `__init__.py`: entry function for python. Called when you import your package: `from freecad import my_package`
 
 ### Structure
@@ -24,14 +23,12 @@ This is the minimal structure of a namespace-package to add a workbench to FreeC
 
 ```
 freecad/
-├── __init__.py
 └── workbench_starterkit/
     ├── __init__.py
-    ├── init_gui.py
-    └── (init.py)
+    └── init_gui.py
 ```
 
-**Note:** `init.py` and `init_gui.py` are called at startup of FreeCAD.  
+**Note:** `init_gui.py` are called at startup of FreeCAD.  
 :exclamation: **Do not put very time-intensive code in these files to reduce the start-up time.**
 
 
