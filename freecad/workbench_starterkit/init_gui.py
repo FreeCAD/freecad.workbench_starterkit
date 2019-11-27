@@ -4,7 +4,7 @@ import FreeCAD as App
 from freecad.workbench_starterkit import ICONPATH
 
 
-class template_workbench(Gui.Workbench):
+class TemplateWorkbench(Gui.Workbench):
     """
     class which gets initiated at starup of the gui
     """
@@ -42,4 +42,4 @@ class template_workbench(Gui.Workbench):
         pass
 
 
-Gui.addWorkbench(template_workbench())
+Gui.addWorkbench(TemplateWorkbench())
