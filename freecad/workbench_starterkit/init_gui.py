@@ -23,8 +23,8 @@ class TemplateWorkbench(Gui.Workbench):
         here is the place to import all the commands
         """
         from freecad.workbench_starterkit import my_numpy_function
-        App.Console.PrintMessage("switching to workbench_starterkit")
-        App.Console.PrintMessage("run a numpy function: sqrt(100) = {}".format(my_numpy_function.my_foo(100)))
+        App.Console.PrintMessage("switching to workbench_starterkit\n")
+        App.Console.PrintMessage("run a numpy function: sqrt(100) = {}\n".format(my_numpy_function.my_foo(100)))
 
         self.appendToolbar("Tools", self.toolbox)
         self.appendMenu("Tools", self.toolbox)
