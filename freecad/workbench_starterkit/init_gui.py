@@ -6,7 +6,7 @@ from freecad.workbench_starterkit import ICONPATH
 
 class TemplateWorkbench(Gui.Workbench):
     """
-    class which gets initiated at starup of the gui
+    class which gets initiated at startup of the gui
     """
 
     MenuText = "template workbench"
