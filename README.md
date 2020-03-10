@@ -1,7 +1,7 @@
 # FreeCAD Workbench-Starterkit
 
 ## Compatibility (important)
-Don't use this repo if you care about py2-support and support of freecad < 0.18. If so please have a look at the traditional workbench structure.
+:exclamation: **Don't use this repo if you care about py2-support and support of freecad < 0.18. If so please have a look at the traditional workbench structure.**
 
 ## Motivation and usage
 This is a template for a FreeCAD workbench / module. As python-packaging and packaging for FreeCAD is not an easy task, this repository should give a overview of the things learned so far. If all you want is to create an extension for FreeCAD (module, additional gui-stuff, workbench), simple copy this repo and start replacing things.
