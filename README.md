@@ -15,6 +15,8 @@ pip install freecad.workbench_starterkit
 pip uninstall freecad.workbench_starterkit 
 ```
 
+**Note:** There are currently two FreeCAD workbench styles. For lack of better names, we use the terms "old style" and "new style" (See [Glossary terms used in this discussion](#glossary-terms-used-in-this-discussion-that-may-lead-to-confusion)). For more discussion about the motivation behind the "new style" see [Motivation for New Style Modules](#motivation-for-new-style-modules).
+
 ## Structure of a workbench:
 
 ### Initialization Files
@@ -22,7 +24,7 @@ pip uninstall freecad.workbench_starterkit
 - `init_gui.py`: mandatory for modules adding new functionality to the GUI.
 - `__init__.py`: entry function for non-gui FreeCAD and python. Called when you import your package: `from freecad import my_package`
 
-Both of these initialization files are called when the FreeCAD-gui is launched. Launching `freecadcmd` or importing FreeCAD (`import freead`) will call the `__init__.py` file. (*The python import will not yet work on every system, but we are working towards a standartization*).
+Both of these initialization files are called when the FreeCAD-gui is launched. Launching `freecadcmd` or importing FreeCAD (`import freead`) will call the `__init__.py` file. (*The python import will not yet work on every system, but we are working towards a standardization*).
 
 ### Structure
 This is the minimal structure of a namespace-package to add a workbench to FreeCAD.
@@ -162,6 +164,15 @@ pip install <package-name>
 This can be a **module, package, workbench, namespace-package, extension-module**.
 - **_new_style_module_**: This refers to **packages** which are added to FreeCAD as **namespace-packages**
 - **_old_style_module_**: A **package** which is plugged into FreeCAD by adding it's base-directory to `sys.path` and uses `Init.py` and `InitGui.py` to get initialized by FreeCAD.
+
+### Motivation for New Style Modules
+There are several reasons why you might consider using the "new style" modules proposed in this template, and upgrade existing workbenches using the "old style".
+
+1. The ability to execute your module using a regular `python` interpreter and have it "just work" (See [related forum discussion](https://forum.freecadweb.org/viewtopic.php?f=8&t=40749#p346331)).
+
+2. Name-spaced packages avoid namespace collisions and the need to have a common prefix on all classes and files to ensure uniqueness (See [related forum discussion](https://forum.freecadweb.org/viewtopic.php?f=23&t=38593&p=345439#p345437)).
+
+3. Integrating with [PyPI](https://pypi.org/) / [pip](https://pip.pypa.io/en/stable/). The ability to `pip install freecad.myworkbench` (See [related forum discussion](https://forum.freecadweb.org/viewtopic.php?f=10&t=38476&p=326444#p326574)).
 
 ### Tip
 
