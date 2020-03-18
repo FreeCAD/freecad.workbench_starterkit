@@ -174,6 +174,10 @@ There are several reasons why you might consider using the "new style" modules p
 
 3. Integrating with [PyPI](https://pypi.org/) / [pip](https://pip.pypa.io/en/stable/). The ability to `pip install freecad.myworkbench` (See [related forum discussion](https://forum.freecadweb.org/viewtopic.php?f=10&t=38476&p=326444#p326574)).
 
+4. InitGui.py and Init.py ("old-style") do not behave like expected because these files are called with exec and are not properly imported. This leads to problems like:
+   - `__file__` not useable to get the path to the python file
+   - predefined variables
+
 ### Tip
 
 Due to the fact we are now using the `pktutil-module` to find extensions of FreeCAD, it's possible to use standard-python-paths to place the extension. This is any location which is included in the `sys.path`.  
