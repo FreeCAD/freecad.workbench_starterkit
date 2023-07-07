@@ -28,4 +28,4 @@ packages = ["freecad", "freecad.workbench_starterkit"]
 include-package-data = true
 
 [tool.setuptools.dynamic]
-version = {attr = "freecad.workbench_starterkit.version.__version__"}
+version = {attr = "freecad.workbench_starterkit.__version__"}
