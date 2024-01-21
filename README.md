@@ -17,6 +17,15 @@ pip uninstall freecad.workbench_starterkit
 
 **Note:** There are currently two FreeCAD workbench styles. The origin workbench type is called "legacy-workbench". In addition the "namespace-workbench" is now an optional (and preffered) way to extend the FreeCAD. (See [Glossary terms used in this discussion](#glossary-terms-used-in-this-discussion-that-may-lead-to-confusion)). For more discussion about the motivation behind the "namespace-workbench" see [Motivation for namespace-workbenches](#motivation-for-namespace-workbenches).
 
+### Changing variables and strings
+
+When using this workbench as template a few replacements need to be made in order to prepare the code for the new workbench.
+To agilize this task there is a `Makefile` ready with some substitutions commands using `sed`.
+
+- Change the content of the variables at the start of the `Makefile` with your data
+- Execute `make` on the command line, this replaces strings and rename file/directory
+- With the help of `git status`  and `git diff` you can verify the changes, if you don't like them use `git restore .`
+
 ## Structure of a namespace-workbench:
 
 ### Initialization Files
@@ -24,7 +33,7 @@ pip uninstall freecad.workbench_starterkit
 - `init_gui.py`: mandatory for modules adding new functionality to the GUI.
 - `__init__.py`: entry function for non-gui FreeCAD and python. Called when you import your package: `from freecad import my_package`
 
-Both of these initialization files are called when the FreeCAD-gui is launched. Launching `freecadcmd` or importing FreeCAD (`import freead`) will call the `__init__.py` file. (*The python import will not yet work on every system, but we are working towards a standardization*).
+Both of these initialization files are called when the FreeCAD-gui is launched. Launching `freecadcmd` or importing FreeCAD (`import freecad`) will call the `__init__.py` file. (*The python import will not yet work on every system, but we are working towards a standardization*).
 
 ### Structure
 This is the minimal structure of a namespace-package to add a workbench to FreeCAD.
