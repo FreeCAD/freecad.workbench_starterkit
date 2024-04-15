@@ -1,0 +1,31 @@
+# References: 
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+# https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages
+# https://packaging.python.org/en/latest/guides/single-sourcing-package-version/
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "freecad.workbench_starterkit"
+dynamic = ["version"]
+description = "template for a freecad extensions, installable with pip"
+readme = "README.md"
+license = {file = "LICENSE"}
+maintainers = [
+    {name = "looooo", email = "sppedflyer@gmail.com"},
+]
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+
+[project.urls]
+source = "https://github.com/FreeCAD/freecad.workbench_starterkit"
+
+[tool.setuptools]
+packages = ["freecad", "freecad.workbench_starterkit"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "freecad.workbench_starterkit.__version__"}
