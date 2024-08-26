@@ -1,8 +1,8 @@
 import os
 import FreeCADGui as Gui
 import FreeCAD as App
-from TranslateUtils import translate
-from freecad.{{cookiecutter.workbench_dir_name}} import ICONPATH, TRANSLATIONSPATH
+from freecad.{{cookiecutter.workbench_module_name}}.TranslateUtils import translate
+from freecad.{{cookiecutter.workbench_module_name}} import ICONPATH, TRANSLATIONSPATH
 
 
 class {{cookiecutter.workbench_class_name}}(Gui.Workbench):
@@ -26,9 +26,9 @@ class {{cookiecutter.workbench_class_name}}(Gui.Workbench):
         Gui.addLanguagePath(TRANSLATIONSPATH)
         Gui.updateLocale()
 
-        from freecad.{{cookiecutter.workbench_dir_name}} import my_numpy_function
+        from freecad.{{cookiecutter.workbench_module_name}} import my_numpy_function
         App.Console.PrintMessage(translate("Console",
-            "Switching to {{cookiecutter.workbench_dir_name}}") + "\n")
+            "Switching to {{cookiecutter.workbench_module_name}}") + "\n")
         App.Console.PrintMessage(translate("Console", "Run a numpy function:") \
             + "sqrt(100) = {}\n".format(my_numpy_function.my_foo(100)))
 

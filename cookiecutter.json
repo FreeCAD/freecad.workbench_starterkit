@@ -1,6 +1,6 @@
 {
   "workbench_project_name": "cool_wb",
-  "workbench_dir_name": "cool_wb",
+  "workbench_module_name": "cool_wb",
   "workbench_class_name": "CoolWorkbench",
   "workbench_menu_text": "cool workbench",
   "workbench_tooltip": "FreeCAD workbench to make cool parametric objects",

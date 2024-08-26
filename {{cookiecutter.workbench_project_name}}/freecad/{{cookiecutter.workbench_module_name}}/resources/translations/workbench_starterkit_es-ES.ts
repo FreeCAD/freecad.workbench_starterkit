@@ -5,7 +5,7 @@
     <name>Console</name>
     <message>
         <location filename="../../init_gui.py" line="30"/>
-        <source>Switching to {{cookiecutter.workbench_dir_name}}</source>
+        <source>Switching to {{cookiecutter.workbench_module_name}}</source>
         <translation>Cambiando a entorno de trabajo {{cookiecutter.workbench_translation_context}}</translation>
     </message>
     <message>
