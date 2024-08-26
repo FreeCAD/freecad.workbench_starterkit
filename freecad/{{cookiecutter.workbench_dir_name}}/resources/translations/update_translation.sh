@@ -92,7 +92,7 @@ release_translation() {
 
 # Main function ------------------------------------------------------------------------------------
 
-WB="workbench_starterkit"
+WB="{{cookiecutter.workbench_dir_name}}"
 LOCALE="$1"
 
 if is_locale_supported "$LOCALE"; then

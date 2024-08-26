@@ -2,16 +2,16 @@ import os
 import FreeCADGui as Gui
 import FreeCAD as App
 from TranslateUtils import translate
-from freecad.workbench_starterkit import ICONPATH, TRANSLATIONSPATH
+from freecad.{{cookiecutter.workbench_dir_name}} import ICONPATH, TRANSLATIONSPATH
 
 
-class TemplateWorkbench(Gui.Workbench):
+class {{cookiecutter.workbench.class_name}}(Gui.Workbench):
     """
     class which gets initiated at startup of the gui
     """
-    MenuText = translate("starterkit", "template workbench")
-    ToolTip = translate("starterkit", "a simple template workbench")
-    Icon = os.path.join(ICONPATH, "template_resource.svg")
+    MenuText = translate("{{cookiecutter.workbench_translation_context}}", "{{cookiecutter.workbench_menu_text}}")
+    ToolTip = translate("{{cookiecutter.workbench_translation_context}}", "a simple {{cookiecutter.workbench_menu_text}}")
+    Icon = os.path.join(ICONPATH, "{{cookiecutter.workbench_icon}}")
     toolbox = []
 
     def GetClassName(self):
@@ -26,9 +26,9 @@ class TemplateWorkbench(Gui.Workbench):
         Gui.addLanguagePath(TRANSLATIONSPATH)
         Gui.updateLocale()
 
-        from freecad.workbench_starterkit import my_numpy_function
+        from freecad.{{cookiecutter.workbench_dir_name}} import my_numpy_function
         App.Console.PrintMessage(translate("Console",
-            "Switching to workbench_starterkit") + "\n")
+            "Switching to {{cookiecutter.workbench_dir_name}}") + "\n")
         App.Console.PrintMessage(translate("Console", "Run a numpy function:") \
             + "sqrt(100) = {}\n".format(my_numpy_function.my_foo(100)))
 
@@ -48,4 +48,4 @@ class TemplateWorkbench(Gui.Workbench):
         pass
 
 
-Gui.addWorkbench(TemplateWorkbench())
+Gui.addWorkbench({{cookiecutter.workbench.class_name}}())
