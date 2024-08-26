@@ -5,7 +5,7 @@ from TranslateUtils import translate
 from freecad.{{cookiecutter.workbench_dir_name}} import ICONPATH, TRANSLATIONSPATH
 
 
-class {{cookiecutter.workbench.class_name}}(Gui.Workbench):
+class {{cookiecutter.workbench_class_name}}(Gui.Workbench):
     """
     class which gets initiated at startup of the gui
     """
@@ -48,4 +48,4 @@ class {{cookiecutter.workbench.class_name}}(Gui.Workbench):
         pass
 
 
-Gui.addWorkbench({{cookiecutter.workbench.class_name}}())
+Gui.addWorkbench({{cookiecutter.workbench_class_name}}())
