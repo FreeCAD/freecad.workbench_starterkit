@@ -2,17 +2,17 @@
 # Replace values from starterkit to your workbench name
 
 # Define replacements as variables
-WORKBENCH_DIR_NAME = my_cool_wb
-WORKBENCH_CLASS_NAME = CoolWorkbench
-WORKBENCH_MENUTEXT = Cool workbench
-WORKBENCH_TOOLTIP = FreeCAD workbench to make cool parametric objects
-WORKBENCH_ICON = cool.svg
-WORKBENCH_TRANSLATION_CONTEXT = cool
-MAINTAINER = me
-EMAIL = me@foobar.com
-URL = https://foobar.com/me/coolWB
-DESCRIPTION = The cool WB creates cool parametric objects
-DEPENDENCIES_LIST = []
+WORKBENCH_DIR_NAME = {{cookiecutter.workbench_dir_name}}
+WORKBENCH_CLASS_NAME = {{cookiecutter.workbench.class_name}}
+WORKBENCH_MENUTEXT = {{cookiecutter.workbench_menu_text}}
+WORKBENCH_TOOLTIP = {{cookiecutter.workbench_tooltip}}
+WORKBENCH_ICON = {{cookiecutter.workbench_icon}}
+WORKBENCH_TRANSLATION_CONTEXT = {{cookiecutter.workbench_translation_context}}
+MAINTAINER = {{cookiecutter.maintainer_name}}
+EMAIL = {{cookiecutter.maintainer_email}}
+URL = {{cookiecutter.project_url}}
+DESCRIPTION = {{cookiecutter.description}}
+DEPENDENCIES_LIST = [{{cookiecutter.dependencies}}] 
 
 .PHONY: all replace_strings
 
