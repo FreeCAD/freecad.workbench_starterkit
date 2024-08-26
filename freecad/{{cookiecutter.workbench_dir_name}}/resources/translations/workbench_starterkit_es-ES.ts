@@ -5,8 +5,8 @@
     <name>Console</name>
     <message>
         <location filename="../../init_gui.py" line="30"/>
-        <source>Switching to workbench_starterkit</source>
-        <translation>Cambiando a entorno de trabajo starterkit</translation>
+        <source>Switching to {{cookiecutter.workbench_dir_name}}</source>
+        <translation>Cambiando a entorno de trabajo {{cookiecutter.workbench_translation_context}}</translation>
     </message>
     <message>
         <location filename="../../init_gui.py" line="32"/>
@@ -31,7 +31,7 @@
     </message>
 </context>
 <context>
-    <name>starterkit</name>
+    <name>{{cookiecutter.workbench_translation_context}}</name>
     <message>
         <location filename="../../init_gui.py" line="12"/>
         <source>template workbench</source>
