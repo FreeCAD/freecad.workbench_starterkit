@@ -1,15 +1,14 @@
 {
-  "workbench_project_name": "cool_wb",
-  "workbench_module_name": "cool_wb",
-  "workbench_class_name": "CoolWorkbench",
+  "workbench_project_name": "CamelCaseProjectName",
+  "workbench_module_name": "underscore_module_name",
+  "workbench_class_name": "CamelCaseClassName",
   "workbench_menu_text": "cool workbench",
   "workbench_tooltip": "FreeCAD workbench to make cool parametric objects",
   "workbench_icon": "cool.svg",
-  "workbench_translation_context": "cool",
-  "maintainer_name": "me",
-  "maintainer_email": "me@foobar.com",
-  "project_url": "https://foobar.com/me/coolWB",
-  "description": "The cool WB creates cool parametric objects",
-  "dependencies": "'numpy',",
-  "version": "0.1.0"
+  "workbench_maintainer_name": "me",
+  "workbench_maintainer_email": "me@foobar.com",
+  "workbench_project_url": "https://foobar.com/me/coolWB",
+  "workbench_description": "The cool WB creates cool parametric objects",
+  "workbench_dependencies": "'numpy',",
+  "workbench_version": "0.1.0"
 }

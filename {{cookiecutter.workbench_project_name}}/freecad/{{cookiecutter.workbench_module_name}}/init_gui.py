@@ -1,16 +1,19 @@
 import os
 import FreeCADGui as Gui
 import FreeCAD as App
-from freecad.{{cookiecutter.workbench_module_name}}.TranslateUtils import translate
-from freecad.{{cookiecutter.workbench_module_name}} import ICONPATH, TRANSLATIONSPATH
+from freecad.{{cookiecutter.workbench_module_name}}.translate_utils import translate
 
+print("search_bar init_gui.py loaded")
+
+ICONPATH = os.path.join(os.path.dirname(__file__), "resources")
+TRANSLATIONSPATH = os.path.join(os.path.dirname(__file__), "resources/translations")
 
 class {{cookiecutter.workbench_class_name}}(Gui.Workbench):
     """
     class which gets initiated at startup of the gui
     """
-    MenuText = translate("{{cookiecutter.workbench_translation_context}}", "{{cookiecutter.workbench_menu_text}}")
-    ToolTip = translate("{{cookiecutter.workbench_translation_context}}", "a simple {{cookiecutter.workbench_menu_text}}")
+    MenuText = translate("{{cookiecutter.workbench_module_name}}", "{{cookiecutter.workbench_menu_text}}")
+    ToolTip = translate("{{cookiecutter.workbench_module_name}}", "a simple {{cookiecutter.workbench_menu_text}}")
     Icon = os.path.join(ICONPATH, "{{cookiecutter.workbench_icon}}")
     toolbox = []
 

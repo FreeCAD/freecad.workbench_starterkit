@@ -40,7 +40,7 @@
 # from freecad.cool_wb.TranslateUtils import translate
 # File "/usr/lib/python3/dist-packages/shiboken2/files.dir/shibokensupport/__feature__.py", line 142, in _import
 # return original_import(name, *args, **kwargs)
-# File "/media/toddg/data1/repos/forked/freecad-source/build/Mod/CoolWB/freecad/cool_wb/TranslateUtils.py", line 31, in <module>
+# File "/media/toddg/data1/repos/forked/freecad-source/build/Mod/CoolWB/freecad/cool_wb/translate_utils.py", line 31, in <module>
 # from DraftGui import translate
 # File "/usr/lib/python3/dist-packages/shiboken2/files.dir/shibokensupport/__feature__.py", line 142, in _import
 # return original_import(name, *args, **kwargs)
