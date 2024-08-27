@@ -34,7 +34,7 @@ Answer the questions:
   [13/13] workbench_version (0.1.0): 
 ```
 
-Voila, the workbench has been created:
+Voila, the workbench has been created in a directory under the current directory:
 
 ```bash
 $ find cool_wb/
@@ -84,7 +84,7 @@ Look for the workbench in the FreeCAD -> View -> Workbenches, it should be there
 
 For much deeper documentation, see the generated docs/HISTORICAL_README.md.
 
-## Installation into FreeCAD source
+## For Installation into FreeCAD source
 
 1. Add option to build this app here
 
@@ -102,6 +102,12 @@ src/Mod/CMakeLists.txt
 +endif(BUILD_COOL_WB)
 ```
 
+## For Installation into the AddOnManager
+
+See instructions here:
+https://github.com/FreeCAD/FreeCAD-addons/blob/master/README.md
+
+
 ## Maintainer
 
-TODO
+ToddG : freecad.ascension109@passinbox.com
