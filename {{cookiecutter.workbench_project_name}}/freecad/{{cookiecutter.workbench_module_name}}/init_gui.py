@@ -2,8 +2,7 @@ import os
 import FreeCADGui as Gui
 import FreeCAD as App
 from freecad.{{cookiecutter.workbench_module_name}}.translate_utils import translate
-
-print("search_bar init_gui.py loaded")
+from freecad. {{cookiecutter.workbench_module_name}} import my_numpy_function
 
 ICONPATH = os.path.join(os.path.dirname(__file__), "resources")
 TRANSLATIONSPATH = os.path.join(os.path.dirname(__file__), "resources/translations")
@@ -29,11 +28,12 @@ class {{cookiecutter.workbench_class_name}}(Gui.Workbench):
         Gui.addLanguagePath(TRANSLATIONSPATH)
         Gui.updateLocale()
 
-        from freecad.{{cookiecutter.workbench_module_name}} import my_numpy_function
-        App.Console.PrintMessage(translate("Console",
+        App.Console.PrintMessage(translate(
+            "{{cookiecutter.workbench_module_name}}",
             "Switching to {{cookiecutter.workbench_module_name}}") + "\n")
-        App.Console.PrintMessage(translate("Console", "Run a numpy function:") \
-            + "sqrt(100) = {}\n".format(my_numpy_function.my_foo(100)))
+        App.Console.PrintMessage(translate(
+            "{{cookiecutter.workbench_module_name}}",
+            "Run a numpy function:") + "sqrt(100) = {}\n".format(my_numpy_function.my_foo(100)))
 
         self.appendToolbar(translate("Toolbar", "Tools"), self.toolbox)
         self.appendMenu(translate("Menu", "Tools"), self.toolbox)
@@ -42,13 +42,17 @@ class {{cookiecutter.workbench_class_name}}(Gui.Workbench):
         '''
         code which should be computed when a user switch to this workbench
         '''
-        pass
+        App.Console.PrintMessage(translate(
+            "{{cookiecutter.workbench_module_name}}",
+            "Workbench {{cookiecutter.workbench_module_name}} activated.") + "\n")
 
     def Deactivated(self):
         '''
         code which should be computed when this workbench is deactivated
         '''
-        pass
+        App.Console.PrintMessage(translate(
+            "{{cookiecutter.workbench_module_name}}",
+            "Workbench {{cookiecutter.workbench_module_name}} de-activated.") + "\n")
 
 
 Gui.addWorkbench({{cookiecutter.workbench_class_name}}())
