@@ -13,9 +13,9 @@ setup(name='freecad.{{cookiecutter.workbench_module_name}}',
       version=str(__version__),
       packages=['freecad',
                 'freecad.{{cookiecutter.workbench_module_name}}'],
-      maintainer="{{cookiecutter.maintainer_name}}",
-      maintainer_email="{{cookiecutter.maintainer_email}}",
-      url="{{cookiecutter.project_url}}",
-      description="{{cookiecutter.description}}",
-      install_requires=[{{cookiecutter.dependencies}}] , # should be satisfied by FreeCAD's system dependencies already
+      maintainer="{{cookiecutter.workbench_maintainer_name}}",
+      maintainer_email="{{cookiecutter.workbench_maintainer_email}}",
+      url="{{cookiecutter.workbench_project_url}}",
+      description="{{cookiecutter.workbench_description}}",
+      install_requires=[{{cookiecutter.workbench_dependencies}}] , # should be satisfied by FreeCAD's system dependencies already
       include_package_data=True)

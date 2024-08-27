@@ -6,7 +6,7 @@
     <message>
         <location filename="../../init_gui.py" line="30"/>
         <source>Switching to {{cookiecutter.workbench_module_name}}</source>
-        <translation>Cambiando a entorno de trabajo {{cookiecutter.workbench_translation_context}}</translation>
+        <translation>Cambiando a entorno de trabajo {{cookiecutter.workbench_module_name}}</translation>
     </message>
     <message>
         <location filename="../../init_gui.py" line="32"/>
@@ -31,7 +31,7 @@
     </message>
 </context>
 <context>
-    <name>{{cookiecutter.workbench_translation_context}}</name>
+    <name>{{cookiecutter.workbench_module_name}}</name>
     <message>
         <location filename="../../init_gui.py" line="12"/>
         <source>template workbench</source>

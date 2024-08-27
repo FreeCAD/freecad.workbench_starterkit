@@ -1,10 +1,10 @@
 # {{cookiecutter.workbench_project_name}}
 
-{{cookiecutter.description}}
+{{cookiecutter.workbench_description}}
 
 ## Dependencies
 
-{{cookiecutter.dependencies}}
+{{cookiecutter.workbench_dependencies}}
 
 ## Quick Start
 
@@ -12,5 +12,5 @@ TODO: add details here
 
 ## Maintainer
 
-{{cookiecutter.maintainer_name}}
-{{cookiecutter.maintainer_email}}
+{{cookiecutter.workbench_maintainer_name}}
+{{cookiecutter.workbench_maintainer_email}}
