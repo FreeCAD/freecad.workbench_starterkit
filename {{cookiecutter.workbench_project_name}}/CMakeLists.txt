@@ -5,7 +5,6 @@ set(Namespace_SRCS
         freecad/{{cookiecutter.workbench_module_name}}/translate_utils.py
         freecad/{{cookiecutter.workbench_module_name}}/version.py
         freecad/{{cookiecutter.workbench_module_name}}/resources/cool.svg
-        freecad/{{cookiecutter.workbench_module_name}}/resources/translations/update_translation.sh
         freecad/{{cookiecutter.workbench_module_name}}/resources/translations/{{cookiecutter.workbench_module_name}}_es-ES.qm
         freecad/{{cookiecutter.workbench_module_name}}/resources/translations/{{cookiecutter.workbench_module_name}}_es-ES.ts
 )
@@ -16,7 +15,7 @@ ADD_CUSTOM_TARGET(SEARCHBAR ALL
         SOURCES ${Namespace_SRCS}
 )
 
-fc_copy_sources(SEARCHBAR "${CMAKE_BINARY_DIR}/Mod/{{cookiecutter.workbench_module_name}}" ${Namespace_SRCS})
+fc_copy_sources(SEARCHBAR "${CMAKE_BINARY_DIR}/Mod/{{cookiecutter.workbench_project_name}}" ${Namespace_SRCS})
 
 INSTALL(
     FILES
