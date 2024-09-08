@@ -11,15 +11,15 @@ set(Namespace_SRCS
 
 SOURCE_GROUP("" FILES ${Namespace_SRCS})
 
-ADD_CUSTOM_TARGET(SEARCHBAR ALL
+ADD_CUSTOM_TARGET({{cookiecutter.workbench_project_name_uppercase}} ALL
         SOURCES ${Namespace_SRCS}
 )
 
-fc_copy_sources(SEARCHBAR "${CMAKE_BINARY_DIR}/Mod/{{cookiecutter.workbench_project_name}}" ${Namespace_SRCS})
+fc_copy_sources({{cookiecutter.workbench_project_name_uppercase}} "${CMAKE_BINARY_DIR}/Mod/{{cookiecutter.workbench_project_name}}" ${Namespace_SRCS})
 
 INSTALL(
     FILES
         ${Namespace_SRCS}
     DESTINATION
-        Mod/SearchBar
+        Mod/{{cookiecutter.workbench_project_name}}
 )
