@@ -52,7 +52,6 @@ cool_wb/MANIFEST.in
 cool_wb/freecad
 cool_wb/freecad/cool_wb
 cool_wb/freecad/cool_wb/init_gui.py
-cool_wb/freecad/cool_wb/translate_utils.py
 cool_wb/freecad/cool_wb/version.py
 cool_wb/freecad/cool_wb/__init__.py
 cool_wb/freecad/cool_wb/my_numpy_function.py

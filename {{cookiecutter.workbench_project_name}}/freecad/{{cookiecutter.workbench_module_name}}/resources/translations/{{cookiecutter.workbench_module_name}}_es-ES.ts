@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="es_ES" sourcelanguage="en">
 <context>
-    <name>Console</name>
+    <name>Log</name>
     <message>
         <location filename="../../init_gui.py" line="30"/>
         <source>Switching to {{cookiecutter.workbench_module_name}}</source>
@@ -15,23 +15,12 @@
     </message>
 </context>
 <context>
-    <name>Menu</name>
+    <name>Workbench</name>
     <message>
         <location filename="../../init_gui.py" line="36"/>
         <source>Tools</source>
         <translation>Herramientas</translation>
     </message>
-</context>
-<context>
-    <name>Toolbar</name>
-    <message>
-        <location filename="../../init_gui.py" line="35"/>
-        <source>Tools</source>
-        <translation>Herramientas</translation>
-    </message>
-</context>
-<context>
-    <name>{{cookiecutter.workbench_module_name}}</name>
     <message>
         <location filename="../../init_gui.py" line="12"/>
         <source>template workbench</source>
