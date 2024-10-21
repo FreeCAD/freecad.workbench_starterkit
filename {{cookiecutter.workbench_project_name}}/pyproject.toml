@@ -1,0 +1,32 @@
+# References: 
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+# https://packaging.python.org/en/latest/guides/packaging-namespace-packages/#native-namespace-packages
+# https://packaging.python.org/en/latest/guides/single-sourcing-package-version/
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "freecad.{{cookiecutter.workbench_module_name}}"
+dynamic = ["version"]
+description = "{{cookiecutter.workbench_description}}"
+readme = "README.md"
+license = {file = "LICENSE"}
+maintainers = [
+    {name = "{{cookiecutter.workbench_maintainer_name}}", email = "{{cookiecutter.workbench_maintainer_email}}"
+    },
+]
+requires-python = ">=3.8"
+dependencies = ["{{cookiecutter.workbench_dependencies}}"]
+
+[project.urls]
+source = "{{cookiecutter.workbench_project_url}}"
+
+[tool.setuptools]
+packages = ["freecad", "freecad.{{cookiecutter.workbench_module_name}}"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "freecad.{{cookiecutter.workbench_module_name}}.__version__"}
