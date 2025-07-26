@@ -10,10 +10,11 @@ if not re.match(MODULE_REGEX, module_name):
     sys.exit(1)
 
 
+# looooo: it should be possible to name a workbench: freecad.my_workbench, so skip this
 # validate project name
-PROJECT_NAME_REGEX = r'^[a-zA-Z]+([A-Z][a-z]+)+$'
-project_name = '{{ cookiecutter.workbench_project_name }}'
+# PROJECT_NAME_REGEX = r'^[a-zA-Z]+([A-Z][a-z]+)+$'
+# project_name = '{{ cookiecutter.workbench_project_name }}'
 
-if not re.match(PROJECT_NAME_REGEX, project_name):
-    print(f'ERROR: {project_name} is not a valid camel case project name!')
-    sys.exit(1)
+# if not re.match(PROJECT_NAME_REGEX, project_name):
+#     print(f'ERROR: {project_name} is not a valid camel case project name!')
+#     sys.exit(1)
