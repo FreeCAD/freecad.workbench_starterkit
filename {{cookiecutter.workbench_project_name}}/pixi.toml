@@ -2,15 +2,14 @@
 authors = ["{{cookiecutter.workbench_maintainer_name}} {{cookiecutter.workbench_maintainer_email}}"]
 channels = ["freecad/label/dev", "conda-forge"]
 description = "{{cookiecutter.workbench_description}}"
-name = "{{cookiecutter.workbench_module_name}}"
+name = "freecad.{{cookiecutter.workbench_module_name}}"
 platforms = ["osx-arm64", "linux-aarch64", "linux-64", "win-64", "osx-64"]
 version = "{{cookiecutter.workbench_version}}"
 
 [pypi-dependencies]
-{{cookiecutter.workbench_module_name}} = { path = ".", editable = true }
+freecad.{{cookiecutter.workbench_module_name}} = { path = ".", editable = true }
 
 [tasks]
-lint = "pylint $(git ls-files '*.py')"
 test = "python tests/tests.py"
 
 [dependencies]
