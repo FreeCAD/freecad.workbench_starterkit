@@ -15,8 +15,7 @@ description = "{{cookiecutter.workbench_description}}"
 readme = "README.md"
 license = {file = "LICENSE"}
 maintainers = [
-    {name = "{{cookiecutter.workbench_maintainer_name}}", email = "{{cookiecutter.workbench_maintainer_email}}"
-    },
+    {name = "{{cookiecutter.workbench_maintainer_name}}", email = "{{cookiecutter.workbench_maintainer_email}}"},
 ]
 requires-python = ">=3.8"
 dependencies = ["{{cookiecutter.workbench_dependencies}}"]
@@ -29,4 +28,4 @@ packages = ["freecad", "freecad.{{cookiecutter.workbench_module_name}}"]
 include-package-data = true
 
 [tool.setuptools.dynamic]
-version = {attr = "freecad.{{cookiecutter.workbench_module_name}}.__version__"}
+version = {attr = "freecad.{{cookiecutter.workbench_module_name}}.version.__version__"}

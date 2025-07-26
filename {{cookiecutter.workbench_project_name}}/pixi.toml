@@ -1,5 +1,5 @@
 [project]
-authors = ["{{cookiecutter.workbench_maintainer_name}} {{cookiecutter.workbench_maintainer_email}}"]
+authors = ["{{cookiecutter.workbench_maintainer_name}} <{{cookiecutter.workbench_maintainer_email}}>"]
 channels = ["freecad/label/dev", "conda-forge"]
 description = "{{cookiecutter.workbench_description}}"
 name = "freecad.{{cookiecutter.workbench_module_name}}"
