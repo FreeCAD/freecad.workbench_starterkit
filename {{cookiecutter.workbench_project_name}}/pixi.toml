@@ -7,7 +7,7 @@ platforms = ["osx-arm64", "linux-aarch64", "linux-64", "win-64", "osx-64"]
 version = "{{cookiecutter.workbench_version}}"
 
 [pypi-dependencies]
-freecad.{{cookiecutter.workbench_module_name}} = { path = ".", editable = true }
+freecad_{{cookiecutter.workbench_module_name}} = { path = ".", editable = true }
 
 [tasks]
 test = "python tests/tests.py"
