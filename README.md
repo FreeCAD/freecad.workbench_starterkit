@@ -1,6 +1,6 @@
 # FreeCAD Workbench Starter Kit
 
-Template for generating FreeCAD workbenches.
+CookieCutter template for generating FreeCAD workbenches. NOTE: You do not need to fork this template to use it, just follow the "Quick Start" instructions below.
 
 ## Dependencies
 
