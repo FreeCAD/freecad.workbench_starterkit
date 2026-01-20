@@ -1,3 +1,5 @@
+NOTE: This `cookiecutter` template is deprecated, and has been superceded by https://github.com/FreeCAD/Addon-Template
+
 # FreeCAD Workbench Starter Kit
 
 CookieCutter template for generating FreeCAD workbenches. NOTE: You do not need to fork this template to use it, just follow the "Quick Start" instructions below.
