@@ -1,4 +1,4 @@
-NOTE: This `cookiecutter` template is deprecated, and has been superceded by https://github.com/FreeCAD/Addon-Template
+NOTE: This `cookiecutter` template is deprecated, and has been superseded by https://github.com/FreeCAD/Addon-Template/tree/cookie
 
 # FreeCAD Workbench Starter Kit
 
@@ -22,18 +22,18 @@ $ cookiecutter https://github.com/FreeCAD/freecad.workbench_starterkit.git
 Answer the questions:
 
 ```bash
-  [1/13] workbench_project_name (cool_wb): 
-  [2/13] workbench_module_name (cool_wb): 
-  [3/13] workbench_class_name (CoolWorkbench): 
-  [4/13] workbench_menu_text (cool workbench): 
-  [5/13] workbench_tooltip (FreeCAD workbench to make cool parametric objects): 
-  [6/13] workbench_icon (cool.svg): 
-  [8/13] workbench_maintainer_name (me): 
-  [9/13] workbench_maintainer_email (me@foobar.com): 
-  [10/13] workbench_project_url (https://foobar.com/me/coolWB): 
-  [11/13] workbench_description (The cool WB creates cool parametric objects): 
-  [12/13] workbench_dependencies ('numpy',): 
-  [13/13] workbench_version (0.1.0): 
+  [1/13] workbench_project_name (cool_wb):
+  [2/13] workbench_module_name (cool_wb):
+  [3/13] workbench_class_name (CoolWorkbench):
+  [4/13] workbench_menu_text (cool workbench):
+  [5/13] workbench_tooltip (FreeCAD workbench to make cool parametric objects):
+  [6/13] workbench_icon (cool.svg):
+  [8/13] workbench_maintainer_name (me):
+  [9/13] workbench_maintainer_email (me@foobar.com):
+  [10/13] workbench_project_url (https://foobar.com/me/coolWB):
+  [11/13] workbench_description (The cool WB creates cool parametric objects):
+  [12/13] workbench_dependencies ('numpy',):
+  [13/13] workbench_version (0.1.0):
 ```
 
 Voila, the workbench has been created in a directory under the current directory:
